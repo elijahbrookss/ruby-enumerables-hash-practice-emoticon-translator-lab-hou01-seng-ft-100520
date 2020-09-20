@@ -24,4 +24,4 @@ def get_japanese_emoticon(file_location, emote)
   return "Sorry, that emoticon was not found"
 end
 
-get_japanese_emoticon("./lib/emoticons.yml", ":)")
+p get_japanese_emoticon("./lib/emoticons.yml", ":)")

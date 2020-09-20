@@ -13,3 +13,13 @@ def load_library(file_location) #string
   end
 end
 
+def get_japanese_emoticon(file_location, emote)
+  emotes = load_library(file_location)
+  emotes.each do 
+    |key, value|
+    p key
+  end
+  
+end
+
+get_japanese_emoticon("./lab/emoticons.yml", ":)")

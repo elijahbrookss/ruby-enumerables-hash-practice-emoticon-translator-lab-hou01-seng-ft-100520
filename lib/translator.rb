@@ -13,6 +13,9 @@ def load_library(file_location) #string
     }
     
   end
+  
+  binding.pry
+  
   hash
 end
 

@@ -5,17 +5,20 @@ require "pry"
 def load_library(file_location) #string
   emotes = YAML.load_file(file_location)
   
-  emotes.each_with_object({}) do 
-    |(key, value), new_hash| 
+  hash = emotes.each_with_object({}) do |(key, value), new_hash| 
+    
     new_hash[key.to_sym] = {
       :english => value[0],
       :japanese => value[1]
     }
     
     binding.pry
+    
   end
+  
+  hash
+  
 end
-
 def get_japanese_emoticon(file_location, emote)
   emotes = load_library(file_location)
   emotes.each do 

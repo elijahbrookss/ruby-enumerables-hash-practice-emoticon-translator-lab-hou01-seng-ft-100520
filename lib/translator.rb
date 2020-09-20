@@ -26,8 +26,14 @@ end
 
 def get_english_meaning(file_location, emote)
   emotes = load_library(file_location)
+  emotes.each do 
+    |name, language_hash|
+    if language_hash[:english] == emote then
+      return name.to_s
+    end
+  end
   
-  
+  return "Sorry, that emoticon was not found"
 end
 
-p get_japanese_emoticon("./lib/emoticons.yml", ":)")
+p get_english_meaning("./lib/emoticons.yml", ":)")

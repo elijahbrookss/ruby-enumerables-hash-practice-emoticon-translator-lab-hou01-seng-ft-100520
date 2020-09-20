@@ -16,8 +16,8 @@ end
 def get_japanese_emoticon(file_location, emote)
   emotes = load_library(file_location)
   emotes.each do 
-    |key, value|
-    p key
+    |name, value|
+    p value
   end
   
 end

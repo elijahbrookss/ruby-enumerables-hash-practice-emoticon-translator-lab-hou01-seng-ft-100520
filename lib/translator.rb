@@ -42,12 +42,15 @@ def get_english_meaning(file_location, emote)
     value[:japanese].each do
       |name, emote_value|
       if emote_value == emote then
-        p name
+        return name
       end
     end
   end
   return "Sorry, that emoticon was not found"  
 end
+
+get_english_meaning("./lib/emoticons.yml", "☜(⌒▽⌒)☞")
+
 
 
 

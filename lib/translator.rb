@@ -28,7 +28,7 @@ def get_english_meaning(file_location, emote)
   emotes = load_library(file_location)
   emotes.each do 
     |name, language_hash|
-    if language_hash[:english] == emote then
+    if language_hash[:japanese] == emote then
       return name.to_s
     end
   end

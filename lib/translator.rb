@@ -7,7 +7,7 @@ def load_library(file_location) #string
   
   hash = emotes.each_with_object({}) do |(key, value), new_hash| 
     
-    new_hash[key.to_sym] = {
+    new_hash[key] = {
       :english => value[0],
       :japanese => value[1]
     }
@@ -35,7 +35,7 @@ def get_english_meaning(file_location, emote)
   emotes.each do 
     |name, language_hash|
     if language_hash[:japanese] == emote then
-      return name.to_s
+      return name
     end
   end
   

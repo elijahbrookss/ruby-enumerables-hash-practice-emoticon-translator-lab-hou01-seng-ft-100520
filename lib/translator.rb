@@ -1,5 +1,6 @@
 # require modules here
 require "yaml"
+require "pry"
 
 def load_library(file_location) #string
   emotes = YAML.load_file(file_location)
@@ -11,6 +12,7 @@ def load_library(file_location) #string
       :japanese => value[1]
     }
     
+    binding.pry
   end
 end
 

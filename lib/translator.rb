@@ -10,6 +10,7 @@ def load_library(file_location) #string
       :english => value[0],
       :japanese => value[1]
     }
+    
   end
 end
 

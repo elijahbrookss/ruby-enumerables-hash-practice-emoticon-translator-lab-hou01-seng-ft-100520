@@ -12,8 +12,6 @@ def load_library(file_location) #string
       :japanese => value[1]
     }
     
-    binding.pry
-    
   end
   
   hash
